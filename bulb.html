@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Design</title>
+    <style>
+
+        body 
+        {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container
+        {
+        text-align: center;
+        margin: 20px;
+        padding: 30px;
+
+        }
+
+        .bulb
+        {
+            width: 100px;
+            height: 190px;
+            background-color: white;
+            border: 1px solid black;;
+            border-radius: 50% 50% 50% 50%;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        button 
+        {
+            margin: 5px;
+            padding-right: 10px;
+            background-color: bisque;
+            font-size: 16px;
+            cursor: pointer;
+            height: 100px;
+            width:35px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="bulb" class="bulb"></div>
+        <button id="onButton">On</button>
+        <button id="offButton">Off</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() 
+        {
+            const bulb = document.getElementById("bulb");
+            const onButton = document.getElementById("onButton");
+            const offButton = document.getElementById("offButton");
+
+            onButton.addEventListener("click", function() 
+            {
+                const color = prompt("Enter the color for the bulb:");
+                if (color) 
+                {
+                    bulb.style.backgroundColor = color;
+                }
+            });
+
+            offButton.addEventListener("click", function()
+            {
+            bulb.style.backgroundColor = "white";
+            });
+        });
+
+    </script>
+</body>
+</html>
